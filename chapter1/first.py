@@ -1,15 +1,3 @@
+# This is the first Python file in chapter 1. where we will write our first Python code and print hello world on the screen.
+
 print("hello world")
-
-a = 5
-b = 10
-print(a + b)
-
-def add(x, y):
-    return x + y
-
-    c =7
-    d = 99
-    e = (d - c)
-    print(e)
-print(add(a, b))    
-print(add(3, 4))

@@ -1,3 +1,6 @@
+# this program lists all files and directories in a given path using the os module. 
+# this is a simple exercise to demonstrate the use of the os module in Python.
+
 import os
 
 def list_directory_contents(path='/'):
