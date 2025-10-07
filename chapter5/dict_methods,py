@@ -1,0 +1,82 @@
+#  Python Dictionary Methods :
+
+# Different ways to create dictionaries
+dict1 = {'name': 'John', 'age': 30}
+dict2 = dict(name='John', age=30)
+dict3 = dict([('name', 'John'), ('age', 30)])
+
+
+
+
+
+# 1. get() - Safe Key Access
+my_dict = {'a': 1, 'b': 2}
+
+# Returns value if key exists, None if not
+print(my_dict.get('a'))      # Output: 1
+print(my_dict.get('c', 0))   # Output: 0 (default value)
+# same function but different. result outputs
+print(my_dict.get('c'))      # Output: None
+# print(my_dict.marks('c'))    # Output : error
+
+
+# 2. keys() - Get All Keys
+my_dicto = {'a': 1, 'b': 2, 'c': 3}
+print(my_dicto.keys())        # Output: dict_keys(['a', 'b', 'c'])
+print(list(my_dicto.keys()))  # Output: ['a', 'b', 'c']
+
+
+# 3. values() - Get All Values
+my_dicti = {'a': 1, 'b': 2, 'c': 3}
+print(my_dicti.values())      # Output: dict_values([1, 2, 3])
+print(list(my_dicti.values())) # Output: [1, 2, 3]
+
+
+
+# 4. items() - Get Key-Value Pairs
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+print(my_dict.items())       # Output: dict_items([('a', 1), ('b', 2), ('c', 3)])
+
+
+
+# 5. update() - Merge Dictionaries
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'b': 3, 'c': 4}
+
+dict1.update(dict2)
+print(dict1)  # Output: {'a': 1, 'b': 3, 'c': 4}
+
+
+
+# 6. pop() - Remove Key & Return Value
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+value = my_dict.pop('b')
+print(value)    # Output: 2
+print(my_dict)  # Output: {'a': 1, 'c': 3}
+
+# With default value
+value = my_dict.pop('x', 'Not found')
+print(value)    # Output: 'Not found'
+
+
+# 7. popitem() - removes last element
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+key, value = my_dict.popitem()
+print(key, value)  # Output: 'c' 3 (Python 3.7+ removes last)
+print(my_dict)     # Output: {'a': 1, 'b': 2}
+
+
+# 8. clear() - remove all items
+my_dict = {'a': 1, 'b': 2}
+my_dict.clear()
+print(my_dict)  # Output: {}
+
+
+
+
+# opperations in dictionaries :
+# 1. lenth() - find the total value pairs in the dictionary
+ln = {'name':"roni", 'number':"toni", 'age':41}
+print(len(ln))
